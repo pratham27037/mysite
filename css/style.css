@@ -4,6 +4,102 @@
   padding-top: 100px;
 }
 
+.main-title {
+  font-size: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 3s steps(13) 1 normal forwards, blink 800ms steps(2) infinite;
+  border-right: 5px solid #66BFBF; /* Cursor effect */
+  display: inline-block; /* Ensure the cursor stays next to the text */
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 50%; /* Adjust this value to match the desired text width */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+/* Toggle Switch */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode img {
+  filter: brightness(0.8);
+}
+
+body.dark-mode .top-container {
+  background-color: #0B192C; /* Change this to your preferred dark mode color */
+}
+
+body.dark-mode .bottom-container{
+    background-color: #0B192C;
+}
+
 h1{
   color: #66BFBF;
   font-size: 5.6225rem;
