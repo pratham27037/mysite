@@ -4,13 +4,80 @@
   padding-top: 100px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space between buttons */
+  margin-top: 20px;
+}
+
+.round-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  /* border: 2px solid white; */
+  border-radius: 50%; /* Circular shape */
+ /* Default LinkedIn Blue */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.round-button img {
+  width: 50px;
+  height:50px;
+}
+
+.round-button:hover {
+  transform: scale(1.1); /* Zoom effect */
+  background-color: #e4f9f5; /* Hover color */
+}
+
+/* Section Links */
+.section-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.section-link {
+  text-decoration: none;
+  color: #66BFBF;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.section-link:hover {
+  color: #555;
+}
+
+.funnel-sans-h2 {
+  font-family: "Funnel Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sriracha-regular {
+  font-family: "Sriracha", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    
 .main-title {
-  font-size: 90px;
+  font-size: 110px;
   white-space: nowrap;
   overflow: hidden;
   animation: typewriter 3s steps(13) 1 normal forwards, blink 800ms steps(2) infinite;
   border-right: 5px solid #66BFBF; /* Cursor effect */
   display: inline-block; /* Ensure the cursor stays next to the text */
+  color: #66BFBF;
+  /* font-size: 5.6225rem; */
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
 }
 
 @keyframes typewriter {
@@ -89,7 +156,7 @@ body.dark-mode {
 }
 
 body.dark-mode img {
-  filter: brightness(0.8);
+  
 }
 
 body.dark-mode .top-container {
@@ -100,12 +167,14 @@ body.dark-mode .bottom-container{
     background-color: #0B192C;
 }
 
-h1{
-  color: #66BFBF;
-  font-size: 5.6225rem;
-  margin: 50px auto 0 auto;
-  font-family: 'Sacramento', cursive;
+body.dark-mode .section-link:hover {
+  color: #ffffff;
 }
+
+body.dark-mode .round-button:hover{
+  background-color:#0B192C;
+}
+
 h2{
   color: #66BFBF;
   font-size: 2.5rem;
@@ -123,8 +192,10 @@ body{
   font-family: 'Merriweather Sans', sans-serif;
 }
 .intro{
-  width: 30%;
-  margin: auto;
+  width: 50%;
+  text-align:center;
+  font-size: 1.4rem;
+  margin: 25px auto;
 }
 .middle-container{
   margin:100px 0;
@@ -157,7 +228,7 @@ a:hover{
 .img{
   border-radius: 50%;
 }
-.skill-row{
+.project-row{
   width: 50%;
   margin: 100px auto;
   text-align: left;
